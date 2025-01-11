@@ -1,19 +1,17 @@
 @startuml
-!define RECTANGLE class
+start
+:Input coefficients a, b, c;
+:Calculate discriminant (Δ = b^2 - 4ac);
 
-RECTANGLE Input {
-    +get_input_data()
-}
-
-RECTANGLE DataProcessor {
-    +process_data(data)
-}
-
-RECTANGLE Output {
-    +display_output(result)
-}
-
-Input -down-> DataProcessor : Provides input data
-DataProcessor -down-> Output : Sends processed result
-
+if (discriminant > 0) then (yes)
+  :Compute root1 = (-b + sqrt(discriminant)) / (2*a);
+  :Compute root2 = (-b - sqrt(discriminant)) / (2*a);
+  :Output "The roots are: " + root1 + " and " + root2;
+elseif (discriminant == 0) then (yes)
+  :Compute root = -b / (2*a);
+  :Output "The root is: " + root;
+else
+  :Output "No real roots";
+endif
+stop
 @enduml
