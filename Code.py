@@ -1,30 +1,21 @@
-class Input:
-    def get_input_data(self):
-        # Simulate retrieving input data (e.g., user input or from a file)
-        return "Hello, World!"
+import math
 
-class DataProcesso:
-    def process_data(self, data):
-        # Process the data (e.g., convert to uppercase)
-        return data.upper()
+def solve_quadratic(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant > 0:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root,
+    else:
+        return "No real roots"
 
-class Output:
-    def display_output(self, result):
-        # Display the processed result
-        print(result)
+# Directly passing values for a, b, and c
+a = 1
+b = -3
+c = 2
 
-# Main program flow
-if __name__ == "__main__":
-    # Instantiate the classes
-    input_obj = Input()
-    processor_obj = DataProcesso()
-    output_obj = Output()
-
-    # Get input data
-    data = input_obj.get_input_data()
-
-    # Process the data
-    processed_data = processor_obj.process_data(data)
-
-    # Display the output
-    output_obj.display_output(processed_data)
+roots = solve_quadratic(a, b, c)
+print(f"The roots of the quadratic equation are: {roots}")
