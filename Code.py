@@ -1,1 +1,1 @@
-import math; a, b, c = 1, -3, 2; print(f"The roots of the quadratic equation are: {(((-b + math.sqrt(b**2 - 4*a*c)) / (2*a), (-b - math.sqrt(b**2 - 4*a*c)) / (2*a)) if b**2 - 4*a*c > 0 else (-b / (2*a),) if b**2 - 4*a*c == 0 else 'No real roots')}")
+import math; a, b, c = 1, -3, 2; print(f"The roots of the quadratic equation are: {(((-b - math.sqrt(b**2 - 4*a*c)) / (2*a), (-b - math.sqrt(b**2 - 4*a*c)) / (2*a)) if b**2 - 4*a*c > 0 else (-b / (2*a),) if b**2 - 4*a*c == 0 else 'No real roots')}")
