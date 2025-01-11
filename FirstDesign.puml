@@ -1,8 +1,19 @@
 @startuml
-start
-:Divide number by 3;
-:Add 2;
-:Subtract 4;
-:Multiply by 7;
-stop
+!define RECTANGLE class
+
+RECTANGLE Input {
+    +get_input_data()
+}
+
+RECTANGLE DataProcessor {
+    +process_data(data)
+}
+
+RECTANGLE Output {
+    +display_output(result)
+}
+
+Input -down-> DataProcessor : Provides input data
+DataProcessor -down-> Output : Sends processed result
+
 @enduml
