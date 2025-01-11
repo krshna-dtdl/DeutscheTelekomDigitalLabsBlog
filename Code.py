@@ -3,7 +3,7 @@ class Input:
         # Simulate retrieving input data (e.g., user input or from a file)
         return "Hello, World!"
 
-class DataProcessor:
+class DataProcesso:
     def process_data(self, data):
         # Process the data (e.g., convert to uppercase)
         return data.upper()
@@ -17,7 +17,7 @@ class Output:
 if __name__ == "__main__":
     # Instantiate the classes
     input_obj = Input()
-    processor_obj = DataProcessor()
+    processor_obj = DataProcesso()
     output_obj = Output()
 
     # Get input data
