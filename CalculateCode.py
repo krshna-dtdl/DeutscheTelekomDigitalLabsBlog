@@ -1,17 +1,30 @@
-# Function to calculate factorial
-def factorial(n):
-    # Step 3: Check if n is 0 or 1
-    if n == 0 or n == 1:
-        return 1
-    else:
-        result = 1
-        # Step 5: Loop from 1 to n
-        for i in range(1, n + 1):
-            result *= i
-        return result
+class Input:
+    def get_input_data(self):
+        # Simulate retrieving input data (e.g., user input or from a file)
+        return "Hello, World!"
 
-# Step 2: Input a number
-n = int(input("Enter a number: "))
+class DataProcessor:
+    def process_data(self, data):
+        # Process the data (e.g., convert to uppercase)
+        return data.upper()
 
-# Step 6: Output the result
-print(f"The factorial of {n} is {factorial(n)}")
+class Output:
+    def display_output(self, result):
+        # Display the processed result
+        print(result)
+
+# Main program flow
+if __name__ == "__main__":
+    # Instantiate the classes
+    input_obj = Input()
+    processor_obj = DataProcessor()
+    output_obj = Output()
+
+    # Get input data
+    data = input_obj.get_input_data()
+
+    # Process the data
+    processed_data = processor_obj.process_data(data)
+
+    # Display the output
+    output_obj.display_output(processed_data)
