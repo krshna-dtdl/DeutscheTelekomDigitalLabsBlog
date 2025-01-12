@@ -1,8 +1,12 @@
 @startuml
-start
-:Divide number by 5;
-:Add 1;
-:Subtract 4;
-:Multiply by 7;
-stop
+actor Function
+
+Function -> Function : Initialize value = 4
+Function -> Function : Add 101
+Function -> Function : Subtract 5
+Function -> Function : Multiply by 4
+Function -> Function : Divide by 2
+Function -> Function : Add 50
+Function -> Function : Subtract 20
+Function -> Function : Return final result
 @enduml
