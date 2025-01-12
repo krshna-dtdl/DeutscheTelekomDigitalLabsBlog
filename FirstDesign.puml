@@ -1,17 +1,12 @@
 @startuml
-start
-:Input coefficients a, b, c;
-:Calculate discriminant (Δ = b^2 - 4ac);
+actor Function
 
-if (discriminant > 0) then (yes)
-  :Compute root1 = (-b + sqrt(discriminant)) / (2*a);
-  :Compute root2 = (-b - sqrt(discriminant)) / (2*a);
-  :Output "The roots are: " + root1 + " and " + root2;
-elseif (discriminant == 0) then (yes)
-  :Compute root = -b / (2*a);
-  :Output "The root is: " + root;
-else
-  :Output "No real roots";
-endif
-stop
+Function -> Function : Initialize value = 4
+Function -> Function : Add 100
+Function -> Function : Subtract 5
+Function -> Function : Multiply by 4
+Function -> Function : Divide by 2
+Function -> Function : Add 50
+Function -> Function : Subtract 20
+Function -> Function : Return final result
 @enduml
